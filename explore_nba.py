@@ -9,9 +9,9 @@ import json
 
 def explore_scoreboard():
     """What games are on today?"""
-    print("==================================================================")
+    print("=" * 60)
     print("TODAY'S SCOREBOARD")
-    print("==================================================================" )
+    print("=" * 60)
 
     board = scoreboard.ScoreBoard()
     games = board.get_dict()["scoreboard"]["games"]
@@ -96,13 +96,13 @@ if __name__ == "__main__":
                 break
 
         if target:
-            # Game is live or finished we can pull play-by-play
+            # Game is live or finished — we can pull play-by-play
             print()
             explore_play_by_play(target)
             print()
             explore_boxscore(target)
         else:
-            # If games haven't started yet use a recent completed game
+            # Games haven't started yet — use a recent completed game
             print("\nNo live/completed games yet today. Using a recent game instead...\n")
             fallback_id = "0022501138"
             try:
