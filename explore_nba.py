@@ -9,9 +9,9 @@ import json
 
 def explore_scoreboard():
     """What games are on today?"""
-    print("=" * 60)
+    print("==================================================================")
     print("TODAY'S SCOREBOARD")
-    print("=" * 60)
+    print("==================================================================")
 
     board = scoreboard.ScoreBoard()
     games = board.get_dict()["scoreboard"]["games"]
@@ -36,9 +36,9 @@ def explore_scoreboard():
 
 def explore_play_by_play(game_id):
     """What does play-by-play data look like for a game?"""
-    print("=" * 60)
+    print("==================================================================")
     print(f"PLAY-BY-PLAY for game {game_id}")
-    print("=" * 60)
+    print("==================================================================")
 
     pbp = playbyplay.PlayByPlay(game_id)
     actions = pbp.get_dict()["game"]["actions"]
@@ -65,9 +65,9 @@ def explore_play_by_play(game_id):
 
 def explore_boxscore(game_id):
     """What does the boxscore look like?"""
-    print("=" * 60)
+    print("==================================================================")
     print(f"BOXSCORE for game {game_id}")
-    print("=" * 60)
+    print("==================================================================")
 
     bs = boxscore.BoxScore(game_id)
     game_data = bs.get_dict()["game"]
