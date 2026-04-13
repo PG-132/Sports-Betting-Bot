@@ -11,7 +11,7 @@ def explore_scoreboard():
     """What games are on today?"""
     print("==================================================================")
     print("TODAY'S SCOREBOARD")
-    print("==================================================================")
+    print("==================================================================" )
 
     board = scoreboard.ScoreBoard()
     games = board.get_dict()["scoreboard"]["games"]
@@ -36,9 +36,9 @@ def explore_scoreboard():
 
 def explore_play_by_play(game_id):
     """What does play-by-play data look like for a game?"""
-    print("==================================================================")
+    print("=" * 60)
     print(f"PLAY-BY-PLAY for game {game_id}")
-    print("==================================================================")
+    print("=" * 60)
 
     pbp = playbyplay.PlayByPlay(game_id)
     actions = pbp.get_dict()["game"]["actions"]
@@ -65,9 +65,9 @@ def explore_play_by_play(game_id):
 
 def explore_boxscore(game_id):
     """What does the boxscore look like?"""
-    print("==================================================================")
+    print("=" * 60)
     print(f"BOXSCORE for game {game_id}")
-    print("==================================================================")
+    print("=" * 60)
 
     bs = boxscore.BoxScore(game_id)
     game_data = bs.get_dict()["game"]
@@ -96,12 +96,14 @@ if __name__ == "__main__":
                 break
 
         if target:
+            # Game is live or finished we can pull play-by-play
             # Game is live or finished — we can pull play-by-play
             print()
             explore_play_by_play(target)
             print()
             explore_boxscore(target)
         else:
+            # If games haven't started yet use a recent completed game
             # Games haven't started yet — use a recent completed game
             print("\nNo live/completed games yet today. Using a recent game instead...\n")
             fallback_id = "0022501138"

@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-# Polymarket 
+#Polymarket 
 POLYMARKET_BASE_URL = os.getenv("POLYMARKET_BASE_URL", "https://clob.polymarket.com")
 POLYMARKET_WS_URL = os.getenv("POLYMARKET_WS_URL", "wss://ws-subscriptions-clob.polymarket.com/ws/market")
 

@@ -36,8 +36,8 @@ def get_game_markets(slug):
 
 
 if __name__ == "__main__":
-    # Tomorrow's known games (April 12, 2026)
-    # Format: (away_code, home_code)
+    #Tomorrow's known games (April 12, 2026)
+    #temp Format: (away_code, home_code) 
     tomorrows_games = [
         ("CHA", "NYK"),
         ("BKN", "TOR"),
