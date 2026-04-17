@@ -1,11 +1,11 @@
-4/6 ---
+4/6/2026 ---
   explored json files from nba api (https://github.com/swar/nba_api)
   cleaned up raw data to get specifics (scoreboard, play be plays, boxscore), understanding what structure I'll be working with moving forward.
 
 
 
 
-4/6 - 4/11
+4/6 - 4/11/2026
   had to tweak web search to look for nba games rather than "nba" tagged slop. Constructed custom url search using data retrieved from nba api so gamma api accurately looks up the games I want.
 
   -slug is built then parsed into gamma api web link.
@@ -19,6 +19,12 @@
 *Important notes*
 if __name__ == "__main__": following code only runs if file is executed directly. functions like build_slug can be imported
 to other files without all test code at bottom running on and on. no need to have this data update to terminal when bot updates. redundant and consumes resources.
+
+
+
+4/12/2026
+	started the process of building the model itself. right now empty framework exists but will be used for storing real time data -> then fed into portion of model that will make the decisions and trade.
+	have to think about how data for these games update before forming the strategy. probably going to do live testing with data, see what those results are, and form a model based off those results.
 
 
 
