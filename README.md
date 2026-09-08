@@ -37,7 +37,7 @@ School got in the way of work, bit slower to work on. managed to assemble new wo
   had to account for multiple potential submarkets within an umbrella market (Example: MegaETH market cap one day after launch: bunch of submarkets: > 1.5 bil, > 2bil, > 4 bil, etc )
   nested loop solution. loop through crypto markets, find one with good liquidity, find the sub market with highest liquidity (if exists multiple)
 
--Not gonna bother talking about all the other atrocities that come with debugging code. above were main logic issues, everything else is clicking run and crashing * 2000 times, fixing line by line till it works you know how it is.
+
 
 *Important notes*
 Aggregated data might look a little weird, it's important to note that **price** in output does not necessarily represent x shares were bought at x price. so:
@@ -85,3 +85,7 @@ NEXT TIME: We're gonna be testing for latency. i think. unless something pops up
 Next time I'll be compiling the data to see if there is a gap or not. If no visible gap appears it's not necessarily lost yet i just need to tighten up tests to find out of a real sub second
 edge is possible. Easiest way to do this is obviously shorten polling times for the api, reduce from 1s to 700-500ms (careful about going too low and hitting rate limits or bad data)
 ill get into it more in detail next time.
+
+
+9/8
+Never updated this, got expected value down to about -$0.5 per trade, was always gonna be underwater. There certainly is a window to ride price higher, im just not quick enough with my current setup
